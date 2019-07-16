@@ -1,0 +1,28 @@
+package selenium_jtpoint;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LocatorByClassName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// System property for Chrome driver
+		System.setProperty("webdriver.chrome.driver", "c:\\selenium_web_driver\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		// Launch Website
+		driver.navigate().to("https://www.testandquiz.com/selenium/testing.html");
+		
+			
+		//Click Automating Testing checkbox
+		driver.findElement(By.className("Automation")).click();
+		
+		
+		
+	}
+
+}
