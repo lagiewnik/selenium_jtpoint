@@ -3,9 +3,11 @@ package selenium_jtpoint;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
-public class LocatorByCssSubstringMatches {
+public class HandlingRadioButtons {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,17 +17,18 @@ public class LocatorByCssSubstringMatches {
 		WebDriver driver = new ChromeDriver();
 		
 		// Launch Website
-		driver.navigate().to("https://www.google.pl");
+		driver.navigate().to("file:///D:/KURSY/TESTOWANIE/selenium_jtpoint/selenium_jtpoint/src/selenium_jtpoint/radio.html");
 		
-		//find element by xpath
-		driver.findElement(By.xpath("//*[@title='Szukaj']")).sendKeys("Python");
-		//driver.findElement(By.xpath("//*[@name='btnK']")).click();
+		//	
+		driver.findElement(By.xpath("//*[@value='Banana']")).click();
 		
-		//find with contains()
-		//driver.findElement(By.xpath("//*[contains(@name,'btnK')]")).click();
-    
-		// find elements with text() method
-		driver.findElement(By.xpath("//*[text()='Szczêœliwy traf']")).click();
+		//dri
+		
+		
+		
+			
+		
+		
 	}
 
 }
