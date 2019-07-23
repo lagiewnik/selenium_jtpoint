@@ -20,12 +20,17 @@ public class DragAndDrop {
 		// Launch Website
 		driver.get("https://www.testandquiz.com/selenium/testing.html");
 		
+		//Scroll down the webpage by 4500 pixels  
+        JavascriptExecutor js = (JavascriptExecutor)driver;  
+        js.executeScript("scrollBy(0, 4500)");  
+        System.out.println("scroll down");
+		
 		//WebElement on which drag and drop operation needs to be performed  
-		WebElement from = driver.findElement(By.id("sourceImage"));
+		WebElement from = driver.findElement(By.xpath("//*[@id=\"sourceImage\"]"));
 		System.out.println("Get from element");
 		
 		//WebElement to which the above object is dropped  
-		WebElement to = driver.findElement(By.id("targetDiv"));
+		WebElement to = driver.findElement(By.xpath("//*[@id=\"targetDiv\"]"));
 		System.out.println("Get to element");
 		
 		Thread.sleep(1500);
